@@ -1,0 +1,98 @@
+﻿Nature of Request / Complaint,,,,
+Category,Su-category,Issue,Issue Description,Responsible Group
+Technical,Electrical,Power outage / no power supply,,Electrical
+Technical,Electrical,Light not working / flickering light,,Electrical
+Technical,Electrical,Switch / socket / MCB issue,,Electrical
+Technical,Electrical,UPS / inverter / DG not working,,Electrical
+Technical,Electrical,Transformer / panel tripping,,Electrical
+Technical,Electrical,Earthing / grounding issue,,Electrical
+Technical,Electrical,Wiring / cable damage,,Electrical
+Technical,Electrical,Energy meter / load fluctuation,,Electrical
+Technical,Electrical,Fan / exhaust not working,,Electrical
+Technical,Electrical,Street / landscape lighting issue,,Electrical
+Technical,Electrical,Emergency light failure,,Electrical
+Technical,Electrical,Power quality issue / surge,,Electrical
+Technical,Electrical,Preventive maintenance request,,Electrical
+Technical,HVAC,AHU / FCU not cooling / heating,,HVAC
+Technical,HVAC,Chiller plant issue / tripping,,HVAC
+Technical,HVAC,Air filter / coil cleaning required,,HVAC
+Technical,HVAC,Noise / vibration complaint,,HVAC
+Technical,HVAC,Low refrigerant / gas leak,,HVAC
+Technical,HVAC,Damper / actuator failure,,HVAC
+Technical,HVAC,BMS control / sensor fault,,HVAC
+Technical,HVAC,Condensate drain choke,,HVAC
+Technical,HVAC,Duct cleaning / maintenance request,,HVAC
+Technical,PHE,No water supply / low pressure,,Plumbing
+Technical,PHE,Water leakage (wall / ceiling / underground),,Plumbing
+Technical,PHE,Tap / shower / flush not working,,Plumbing
+Technical,PHE,Blocked drain / choke,,Plumbing
+Technical,PHE,Toilet / urinal overflow,,Plumbing
+Technical,PHE,Pump not working / air lock,,Plumbing
+Technical,PHE,Tank overflow / level switch failure,,Plumbing
+Technical,PHE,STP / WTP / RO unit fault,,Plumbing
+Technical,PHE,Geyser / hot water issue,,Plumbing
+Technical,PHE,Odour complaint / sewage backup,,Plumbing
+Technical,PHE,Fire hydrant / sprinkler leakage,,Plumbing
+Technical,PHE,Plumbing line modification / extension,,Plumbing
+Technical,PHE,Preventive maintenance request,,Plumbing
+Technical,Civil,Wall / ceiling crack or damage,,Civil
+Technical,Civil,Paint touch-up / repainting needed,,Civil
+Technical,Civil,Door / window repair / alignment,,Civil
+Technical,Civil,Floor tile / marble / carpet damage,,Civil
+Technical,Civil,False ceiling / gypsum repair,,Civil
+Technical,Civil,Leakage / seepage / dampness,,Civil
+Technical,Civil,Masonry / plaster repair,,Civil
+Technical,Civil,Glass / glazing breakage,,Civil
+Technical,Civil,Furniture / carpentry repair,,Civil
+Technical,Civil,Minor fabrication / railing fix,,Civil
+Technical,Civil,Water proofing requirement,,Civil
+Soft Services,Housekeeping,Debris / civil waste removal,,Housekeeping
+Soft Services,Housekeeping,Cleaning not done / delayed,,Housekeeping
+Soft Services,Housekeeping,Spillage / stain removal required,,Housekeeping
+Soft Services,Housekeeping,Restroom cleaning / supplies refill,,Housekeeping
+Soft Services,Housekeeping,Deep cleaning / periodic cleaning request,,Housekeeping
+Soft Services,Housekeeping,Glass / window cleaning,,Housekeeping
+Soft Services,Housekeeping,Carpet / upholstery cleaning,,Housekeeping
+Soft Services,Housekeeping,Pantry cleaning,,Housekeeping
+Soft Services,Housekeeping,Garbage bin overflow,,Housekeeping
+Soft Services,Housekeeping,Cleaning schedule deviation,,Housekeeping
+Soft Services,Housekeeping,Pest infestation observed,,Housekeeping
+Security Services,Access Control,Access control issue / card not working,,Access Control
+Security Services,Access Control,Unauthorized entry / security incident,,Access Control
+Security Services,Access Control,CCTV not working / footage required,,Access Control
+Security Services,Access Control,Guard not available / absent,,Access Control
+Security Services,Access Control,Key / lock issue,,Access Control
+Security Services,Access Control,Lost & found report,,Access Control
+Security Services,Access Control,Escort / access assistance,,Access Control
+Security Services,Access Control,Fire alarm / security alarm triggered,,Access Control
+Security Services,Access Control,Visitor management issue,,Access Control
+Horticulture,Landscape Upkeep,Garden / lawn not maintained,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Dry / dead plants replacement,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Drip / irrigation line issue,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Tree trimming / pruning required,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Manure / fertilizer requirement,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Landscape lighting issue,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Pest / weed infestation,,Landscape Upkeep
+Horticulture,Landscape Upkeep,Seasonal plantation / flower bed update,,Landscape Upkeep
+Soft Services,Housekeeping,Garbage not collected,,Housekeeping
+Soft Services,Housekeeping,Waste bin overflow / replacement,,Housekeeping
+Soft Services,Housekeeping,Segregation issue (wet/dry),,Housekeeping
+Soft Services,Housekeeping,Sanitary waste disposal,,Housekeeping
+Technical,EHS,Hazardous waste disposal request,,EHS
+Technical,EHS,E-waste / scrap disposal,,EHS
+Soft Services,Pest Control,Mosquito / fly issue,,Pest Control
+Soft Services,Pest Control,Cockroach / rodent infestation,,Pest Control
+Soft Services,Pest Control,Termite / ant problem,,Pest Control
+Soft Services,Pest Control,Fogging / pest treatment request,,Pest Control
+Soft Services,Pest Control,Snake / stray animal complaint,,Pest Control
+Transport,Transport,Vehicle booking request,,Transport
+Transport,Transport,Shuttle / cab delay,,Transport
+Transport,Transport,Driver not available,,Transport
+Transport,Transport,Vehicle breakdown,,Transport
+Admin,Office Support,Material / courier dispatch,,Office Support
+Admin,Office Support,Stationery request / stockout,,Office Support
+Admin,Office Support,Printing / photocopy issue,,Office Support
+Admin,Office Support,Pantry supply / vending machine issue,,Office Support
+Admin,Office Support,Meeting room setup request,,Office Support
+Admin,Office Support,Asset relocation / shifting,,Office Support
+Admin,Office Support,Lost & found item,,Office Support

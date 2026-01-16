@@ -1,0 +1,42 @@
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/WTP & STP/BDPL OCP 09 F-01-B STP Daily Operational Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/WTP & STP/BDPL OCP 10 F-04 Water Flow Meter Reading Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/WTP & STP/BDPL OCP 09 F-01-A STP Daily Operational Log-MBR.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/WTP & STP/BDPL OCP 10 F-01 Water Tank Daily Check Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/WTP & STP/BDPL OCP 10 F-05 WTP Pump Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/WTP & STP/BDPL OCP 10 F-03 WTP Operational Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-21 Fire Shaft Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-22 Fire Hose Cabinet Hourly Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-07 Hydrant Pump Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-10 Sprinkler Pump Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-05 Fire Engine Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-11 Fire Suppression System Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-08 Booster Pump Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-17 Fire Pumps and Sprinkler System Weekly Inspection.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-04 FAPA Systems Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-09 Jockey Pump Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-18 Fire Detection and Alarm System Weekly Inspection.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 02 F-03 Fire Equipment Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Fire & Safety/BDPL OCP 23 F-06 Eye Wash Bottle Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 22 F-25 RTCC Panel Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 22 F-19 LT Panel Daily Check List.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 22 F-15 Panel Daily check list.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 26 F-21 CCTV Daily Inspection Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 22 F-29 Pumps Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 26 F-11 CCTV Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL OCP 14 F-07 HSD Yard Weekly Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL OCP 11 F-01 DG A-Check Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL OCP 11 F-03 DG Running Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 22 F-27 Elevator Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Electrical Check list/BDPL IMSP 22 F-26 UPS Daily Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/Exhaust fan daily check list.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 13 F-02 Chiller Pump Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 13 F-05 Water Cooled Chiller Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 12 F-03 AHU Parameter Readings.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 13 F-01 Chiller Daily Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 13 F-03 Chiller Pump Status Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 12 F-02 AHU Daily Inspection Checklist.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/HVAC/BDPL OCP 13 F-04 Air Cooled Chiller Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Transformer & HT/BDPL IMSP 22 F-23 Transformer Daily Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Transformer & HT/BDPL IMSP 22 F-16 HT Panels Daily Check list.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Transformer & HT/BDPL IMSP 22 F-18 HT Meter Cubicle Reading Log.pdf
+Fields needed in each Module/Daily Task-Log Sheet Module/Technical Daily Task/Daily Check list/Transformer & HT/BDPL IMSP 22 F-24 Transformer Daily Checklist.pdf

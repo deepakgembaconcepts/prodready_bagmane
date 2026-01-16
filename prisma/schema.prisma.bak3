@@ -1,0 +1,430 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  name        String
+  role        String
+  description String?  
+  avatar      String?
+  password    String   @default("$2b$10$EpRnTzVlqHNP0.fKbX99ijznOJVEST5/0bgjBogMHR.zSHCNghC") // Default: 'password123'
+  status      String   @default("Active")
+  phone       String?
+  icon        String? 
+  permissions String 
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  createdTickets Ticket[] @relation("TicketCreator")
+  assignedTickets Ticket[] @relation("TicketAssignee")
+  escLevel1Tickets Ticket[] @relation("EscalationL1")
+  escLevel2Tickets Ticket[] @relation("EscalationL2")
+  escLevel3Tickets Ticket[] @relation("EscalationL3")
+}
+
+model Asset {
+  id        Int      @id @default(autoincrement())
+  assetId   String   @unique 
+  name      String
+  category  String
+  status    String
+  location  String
+  
+  buildingId String?
+  building   Building? @relation(fields: [buildingId], references: [id])
+  floorId    String?
+  floor      Floor?   @relation(fields: [floorId], references: [id])
+  room       String?
+  wing       String?
+
+  make         String?
+  model        String?
+  serialNumber String?
+  purchaseDate DateTime?
+  warrantyExpiry DateTime?
+  nextMaintenanceDate DateTime?
+  cost         Float?
+  usefulLife   Int?
+  residualValue Float?
+  depreciationMethod String?
+
+  tickets    Ticket[] 
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Ticket {
+  id          Int      @id @default(autoincrement())
+  ticketId    String   @unique
+  title       String
+  description String
+  status      String   @default("Open") 
+  priority    String   @default("P3")
+  category    String
+  subCategory String?  // Added for escalation logic
+  issue       String?  // Added for escalation logic
+  location    String?
+
+  assetId     Int?
+  asset       Asset?   @relation(fields: [assetId], references: [id])
+
+  reportedById Int
+  reportedBy   User @relation("TicketCreator", fields: [reportedById], references: [id])
+  
+  assignedToId Int?
+  assignedTo   User? @relation("TicketAssignee", fields: [assignedToId], references: [id])
+
+  escalationLevel Int @default(0)
+  escalationStatus String? // "Normal", "Escalated"
+  
+  escL1Id Int?
+  escL1   User? @relation("EscalationL1", fields: [escL1Id], references: [id])
+  escL2Id Int?
+  escL2   User? @relation("EscalationL2", fields: [escL2Id], references: [id])
+  escL3Id Int?
+  escL3   User? @relation("EscalationL3", fields: [escL3Id], references: [id])
+
+  comments TicketComment[]
+  history  TicketHistory[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  closedAt  DateTime?
+  slaBreach Boolean @default(false)
+}
+
+model TicketComment {
+  id        Int      @id @default(autoincrement())
+  ticketId  Int
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
+  userId    Int
+  content   String
+  isInternal Boolean @default(false)
+  createdAt DateTime @default(now())
+}
+
+model TicketHistory {
+  id        Int      @id @default(autoincrement())
+  ticketId  Int
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
+  action    String   // "Created", "Updated", "Commented", "Escalated"
+  details   String?
+  changedBy Int
+  timestamp DateTime @default(now())
+}
+
+model Site {
+  id        Int      @id @default(autoincrement())
+  siteId    String   @unique @default(uuid())
+  name      String
+  region    String?
+  city      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  buildings Building[]
+  inventory InventoryItem[]
+  energyMeters EnergyMeter[] // Relation to EnergyMeter
+}
+
+model Building {
+  id        String   @id @default(uuid())
+  name      String
+  address   String
+  siteId    Int
+  site      Site     @relation(fields: [siteId], references: [id])
+  
+  floors    Floor[]
+  assets    Asset[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Floor {
+  id         String   @id @default(uuid())
+  name       String
+  level      Int
+  area       Float
+  status     String // "Occupied", "Vacant", "UnderMaintenance"
+  
+  buildingId String
+  building   Building @relation(fields: [buildingId], references: [id])
+  
+  assets     Asset[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// --- Vendor Management ---
+
+model Vendor {
+  id             Int      @id @default(autoincrement())
+  name           String
+  serviceCategory String // "HVAC", "Cleaning", "Security", etc.
+  contactPerson  String
+  email          String
+  phone          String
+  address        String?
+  rating         Float?   // 1.0 to 5.0
+  status         String   @default("Active") // "Active", "Inactive", "Blacklisted"
+  complianceStatus String @default("Compliant") // "Compliant", "NonCompliant"
+
+  contracts      Contract[]
+  workPermits    WorkPermit[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Contract {
+  id          Int      @id @default(autoincrement())
+  contractId  String   @unique
+  vendorId    Int
+  vendor      Vendor   @relation(fields: [vendorId], references: [id])
+  
+  title       String
+  description String?
+  startDate   DateTime
+  endDate     DateTime
+  value       Float
+  status      String   @default("Active") // "Draft", "Active", "Expired", "Terminated"
+  
+  slas        SLA[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SLA {
+  id          Int      @id @default(autoincrement())
+  contractId  Int
+  contract    Contract @relation(fields: [contractId], references: [id])
+  metric      String   // e.g., "Response Time", "Uptime"
+  target      String   // e.g., "99.9%", "4 Hours"
+  penalty     String?
+}
+
+// --- Work Permit System ---
+
+model WorkPermit {
+  id           Int      @id @default(autoincrement())
+  permitId     String   @unique
+  type         String // "Hot Work", "Height Work", "Cold Work", "Confined Space"
+  status       String   @default("Pending") // "Pending", "Approved", "Rejected", "Active", "Closed"
+  
+  vendorId     Int?
+  vendor       Vendor?  @relation(fields: [vendorId], references: [id])
+  
+  requestedBy  String
+  approvedBy   String?
+  
+  validFrom    DateTime
+  validTo      DateTime
+  
+  location     String
+  description  String
+  
+  jsa          JSA?
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model JSA {
+  id           Int      @id @default(autoincrement())
+  permitId     Int      @unique
+  permit       WorkPermit @relation(fields: [permitId], references: [id])
+  
+  hazards      String // JSON string of hazards
+  precautions  String // JSON string of precautions
+  ppeRequired  String // JSON string of PPE
+}
+
+// --- Inventory Management ---
+// Matches InventoryItem interface
+
+model InventoryItem {
+  id           Int      @id @default(autoincrement())
+  itemId       String   @unique
+  name         String
+  category     String // "Spares", "Consumables", "Tools"
+  sku          String?
+  
+  quantity     Int      @default(0)
+  unit         String   // "Nos", "Kg", "Liters"
+  minLevel     Int      @default(5)
+  reorderLevel Int      @default(10)
+  
+  location     String? // e.g. "Store Room A"
+  siteId       Int?
+  site         Site?    @relation(fields: [siteId], references: [id])
+
+  transactions InventoryTransaction[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model InventoryTransaction {
+  id           Int      @id @default(autoincrement())
+  itemId       Int
+  item         InventoryItem @relation(fields: [itemId], references: [id])
+  
+  type         String // "IN", "OUT", "ADJUSTMENT"
+  quantity     Int
+  reason       String? // "Purchase", "Usage", "Damage", "Correction"
+  performedBy  String // User ID or Name
+  date         DateTime @default(now())
+}
+
+
+// --- Feedback (CSAT & NPS) ---
+
+model CSATResponse {
+  id        Int      @id @default(autoincrement())
+  ticketId  String?  // Can link to a specific ticket
+  rating    Int      // 1-5
+  feedback  String?
+  submittedBy String? // User ID or email, optional
+  createdAt DateTime @default(now())
+}
+
+model NPSResponse {
+  id        Int      @id @default(autoincrement())
+  rating    Int      // 0-10
+  feedback  String?
+  submittedBy String?
+  createdAt DateTime @default(now())
+}
+
+// --- New Modules: Complex Info and Electricity ---
+
+model ComplexInfo {
+  id            Int      @id @default(autoincrement())
+  name          String
+  address       String
+  totalArea     Float
+  numberOfBuildings Int
+  contactNumber String?
+  email         String?
+  constructYear Int?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model EnergyMeter {
+  id            Int      @id @default(autoincrement())
+  meterId       String   @unique
+  name          String
+  type          String   // "Electricity", "Water", "Gas"
+  location      String
+  
+  siteId        Int
+  site          Site     @relation(fields: [siteId], references: [id])
+  
+  readings      MeterReading[]
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model MeterReading {
+  id            Int      @id @default(autoincrement())
+  meterId       Int
+  meter         EnergyMeter @relation(fields: [meterId], references: [id])
+  
+  value         Float
+  unit          String   // "kWh", "L", "m3"
+  timestamp     DateTime @default(now())
+}
+
+// --- Escalation Rules ---
+model EscalationRule {
+  id            Int      @id @default(autoincrement())
+  category      String
+  subCategory   String
+  issue         String
+  priority      String
+  
+  l0ResponseTime   Int
+  l0ResolutionTime Int
+  l1ResponseTime   Int?
+  l1ResolutionTime Int?
+  l2ResponseTime   Int?
+  l2ResolutionTime Int?
+  l3ResponseTime   Int?
+  l3ResolutionTime Int?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@unique([category, subCategory, issue, priority])
+}
+
+
+// --- CSAT/NPS Surveys (Phase 6) ---
+model CSATSurvey {
+  id              Int      @id @default(autoincrement())
+  ticketId        String
+  tenantName      String
+  rating          Int
+  serviceQuality  Int?
+  responseTime    Int?
+  professionalism Int?
+  comments        String?
+  submittedAt     DateTime @default(now())
+}
+
+model NPSSurvey {
+  id          Int      @id @default(autoincrement())
+  tenantName  String
+  score       Int
+  feedback    String?
+  submittedAt DateTime @default(now())
+}
+
+// --- Audits & Compliance (Phase 8) ---
+model Audit {
+  id            Int      @id @default(autoincrement())
+  auditId       String   @unique
+  title         String
+  type          String
+  auditor       String
+  scheduledDate DateTime
+  status        String
+  score         Int?
+  findings      String?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ComplianceRecord {
+  id             Int      @id @default(autoincrement())
+  complianceId   String   @unique
+  title          String
+  authority      String
+  licenseNumber  String
+  issueDate      DateTime
+  expiryDate     DateTime
+  status         String
+  renewalDate    DateTime?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

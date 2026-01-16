@@ -1,0 +1,10 @@
+
+import React, { useState, useMemo, useEffect } from 'react';
+import { useAuth, AuthProvider } from './context/AuthContext';
+// ... imports will be moved here or kept in App.tsx if we just refactor App content.
+// Actually, easier to make App.tsx the wrapper and rename original App to 'AuthenticatedApp' or similar. 
+// But App.tsx is huge. 
+// Strategy: 
+// 1. Rename App class/func to 'BagmaneApp'.
+// 2. Create a new App component that just wraps BagmaneApp with AuthProvider.
+// 3. Inside BagmaneApp, replace useState(currentUser) with useAuth().
